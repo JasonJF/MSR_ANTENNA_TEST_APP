@@ -1,5 +1,5 @@
 body {
-    background-color: #333036;
+    //background-color: #333036;
     //display: flex;
     }
 .outerContainer {
@@ -20,8 +20,10 @@ body {
 
 
 #vizWindow {
+    display:flex;
     height: 400px;
     width: auto;
+    text-align: center;
 
 }
 #scriptBox1 {
@@ -32,7 +34,37 @@ body {
     height: 50px;
     width: auto;
 }
-#logBox {
+#logBoxContainer {
     height: 150px;
     width: auto;
+
+}
+#logBox {
+    resize: none;
+    position: relative;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    height: 96%;
+    width: 100%;
+    overflow: auto;
+}
+.antPcbContainer{
+    display:flex;
+    justify-content: center;
+    text-align:center;
+
+    }
+#antPcb {
+
+    x:70;
+    y:50;
+    top: 50%;
+    width:900px;
+    height:300px;
+    fill:green;
+    stroke-width:1;
+
 }

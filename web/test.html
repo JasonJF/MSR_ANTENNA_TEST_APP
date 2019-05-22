@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="/css/test.css" rel="stylesheet" />
+<link href="/css/PCB.css" rel="stylesheet" />
+<link href="/css/bootstrap.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
 </head>
 <body>
 <div class="outerContainer">
-<div class="innerContainer" id="vizWindow">Main Display</div>
-<div class="innerContainer" id="scriptBox1">scriptBox1</div>
+<div class="innerContainer" id="vizWindow">    <div id="pcbOuterContainer">
+        <div id="pcbInnerContainer">
+            <svg id="outerSVG" >
+              <svg id="svgPCB" x="5%">
+                <rect id="rectangle"/></svg>
+
+
+            </svg>
+        </div>
+
+        <div id="innerContainer"></div>
+    </div>
+</svg></div>
+<div class="innerContainer" id="scriptBox1">
+     <button type="button" class="btn btn-primary btn-sm" onclick="">RUN</button>
+     <button type="button" class="btn btn-primary btn-sm" onclick="">STOP</button>
+     <button type="button" class="btn btn-primary btn-sm" onclick="">RESTART</button>
+</div>
 <div class="innerContainer" id="scriptBox2">scriptBox2</div>
-<div class="innerContainer" id="logBox">logbox</div>
+<div class="innerContainer" id="logBoxContainer"><textarea id="logBox"></textarea></div>
 </div>
 <script type="text/javascript" src="/eel.js"></script>
 <script type="text/javascript" src="/js/testing.js"></script>
+<script type="text/javascript" src="/js/PCB.js"></script>
+<script>editColor("ANT3","rgb(0,255,0)")</script>
+
 </body>
 </html>

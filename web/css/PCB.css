@@ -1,0 +1,40 @@
+#pcbOuterContainer {
+  width: 100%;
+  height: auto;
+}
+#pcbInnerContainer{
+  display:flex;
+  justify-content: center;
+  height: 350px;
+  width: 100%;
+  //background-color: grey;
+}
+#rectangle {
+  x: 0;
+  y: 15%;
+  height: 220px;
+  width: 1000px;
+  fill: #149C2B;
+}
+#innerElement {
+
+  y: 18%;
+  height: 50px;
+  width: 55px;
+  fill: pink;
+}
+#outerSVG {
+
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  //border: solid;
+}
+.innerElement {
+
+  y: 18%;
+  height: 32px;
+  width: 56px;
+  fill: green;
+}
