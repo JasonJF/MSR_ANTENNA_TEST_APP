@@ -5,9 +5,9 @@
 <link href="/css/bootstrap.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Antenna PCB Test App</title>
 </head>
-<body>
+
 <div class="outerContainer">
 <div class="innerContainer" id="vizWindow">    <div id="pcbOuterContainer">
         <div id="pcbInnerContainer">
@@ -28,15 +28,22 @@
      <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">STOP</button>
      <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RESTART</button>
     </div>
+    <div class="btn-toolbar btn-group-justified">
+     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">SN</button>
+     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">DATE</button>
+     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">EXPORT CSV..</button>
+    </div>
 </div>
 <div class="innerContainer" id="scriptBox2">scriptBox2</div>
-<div class="innerContainer" id="logBoxContainer"><textarea id="logBox"></textarea></div>
+<div class="innerContainer" id="logBoxContainer">
+    <textarea id="logBox"></textarea>
+</div>
 </div>
 <script type="text/javascript" src="/eel.js"></script>
 <script type="text/javascript" src="/js/testing.js"></script>
 <script type="text/javascript" src="/js/PCB.js"></script>
 <script>
-editColor("ANT3","rgb(0,255,0)");
+
 var antennaColors;
 async function run(){
 let antennaColors = await eel.getDataList()();
@@ -49,5 +56,5 @@ run();
 
 </script>
 
-</body>
+
 </html>
