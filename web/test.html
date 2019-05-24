@@ -23,9 +23,11 @@
     </div>
 </svg></div>
 <div class="innerContainer" id="scriptBox1">
-     <button type="button" class="btn btn-primary btn-sm" onclick="">RUN</button>
-     <button type="button" class="btn btn-primary btn-sm" onclick="">STOP</button>
-     <button type="button" class="btn btn-primary btn-sm" onclick="">RESTART</button>
+    <div class="btn-toolbar">
+     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RUN</button>
+     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">STOP</button>
+     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RESTART</button>
+    </div>
 </div>
 <div class="innerContainer" id="scriptBox2">scriptBox2</div>
 <div class="innerContainer" id="logBoxContainer"><textarea id="logBox"></textarea></div>
@@ -33,7 +35,19 @@
 <script type="text/javascript" src="/eel.js"></script>
 <script type="text/javascript" src="/js/testing.js"></script>
 <script type="text/javascript" src="/js/PCB.js"></script>
-<script>editColor("ANT3","rgb(0,255,0)")</script>
+<script>
+editColor("ANT3","rgb(0,255,0)");
+var antennaColors;
+async function run(){
+let antennaColors = await eel.getDataList()();
+for (i=0; i < 14; i++){
+console.log(i);
+editColor(antennaColors[i][0],antennaColors[i][1])};
+}
+run();
+
+
+</script>
 
 </body>
 </html>

@@ -14,5 +14,5 @@ var x = 71.4;
       for (i = 1; i < 15 ; i++) {
         var newX = (x*i)-61;
         var posX = newX + 'px';
-        console.log(posX);
+        //console.log(posX);
         createBlock(posX,i);}
