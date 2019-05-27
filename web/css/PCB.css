@@ -34,7 +34,16 @@
 .innerElement {
 
   y: 18%;
-  height: 32px;
+  height: 16px;
   width: 56px;
   fill: green;
+}
+
+.pos {
+  y: 63px;
+  fill: red;
+}
+.neg {
+  y: 79px;
+  fill: blue;
 }

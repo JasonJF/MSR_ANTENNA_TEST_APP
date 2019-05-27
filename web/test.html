@@ -26,7 +26,7 @@
     <div class="btn-toolbar">
      <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RUN</button>
      <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">STOP</button>
-     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RESTART</button>
+     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="uiReload()">RESTART</button>
     </div>
     <div class="btn-toolbar btn-group-justified">
      <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">SN</button>
@@ -47,7 +47,8 @@
 var antennaColors;
 async function run(){
 let antennaColors = await eel.getDataList()();
-for (i=0; i < 14; i++){
+console.log(antennaColors.length)
+for (i=0; i < 28; i++){
 console.log(i);
 editColor(antennaColors[i][0],antennaColors[i][1])};
 }
