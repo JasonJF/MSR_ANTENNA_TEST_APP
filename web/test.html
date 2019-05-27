@@ -3,59 +3,69 @@
 <link href="/css/test.css" rel="stylesheet" />
 <link href="/css/PCB.css" rel="stylesheet" />
 <link href="/css/bootstrap.css" rel="stylesheet" />
+
 <head>
     <meta charset="UTF-8">
     <title>Antenna PCB Test App</title>
 </head>
 
 <div class="outerContainer">
-<div class="innerContainer" id="vizWindow">    <div id="pcbOuterContainer">
-        <div id="pcbInnerContainer">
-            <svg id="outerSVG" >
-              <svg id="svgPCB" x="5%">
-                <rect id="rectangle"/></svg>
+    <br><br>
+    <div class="innerContainer interfaceWrapper">
 
+            <div class="innerContainer buttonBox">
+                <button type="button" class="btn btn-primary btn-sm m-1" onclick="">RUN</button>
+                <button type="button" class="btn btn-primary btn-sm m-1" onclick="">STOP</button>
+                <button type="button" class="btn btn-primary btn-sm m-1" onclick="uiReload()">RESTART</button>
+                <button type="button" class="btn btn-warning btn-sm m-1" onclick="">SN</button>
+                <button type="button" class="btn btn-warning btn-sm m-1" onclick="">DATE</button>
+                <button type="button" class="btn btn-warning btn-sm m-1" onclick="">EXPORT CSV..</button>
+            </div>
 
-            </svg>
+        <div class="innerContainer" id="pcbOuterContainer">
+            <div id="pcbInnerContainer">
+                <svg id="outerSVG">
+                    <svg id="svgPCB" x="2%">
+                        <rect id="rectangle" />
+                    </svg>
+
+                </svg>
+            </div>
+
         </div>
 
-        <div id="innerContainer"></div>
     </div>
-</svg></div>
-<div class="innerContainer" id="scriptBox1">
-    <div class="btn-toolbar">
-     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">RUN</button>
-     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="">STOP</button>
-     <button type="button" class="btn btn-primary btn-sm mr-1" onclick="uiReload()">RESTART</button>
+
+    <!--<div class="innerContainer" id="scriptBox2">scriptBox2</div>-->
+    <div class="innerContainer messageWrapper">
+        <div class="innerContainer">
+            <table class="resultsBox" style="text-wrap=normal" id="resultsBox">
+                <tr>
+                <td>Element</td>
+                <td>( + ) Magnitude</td>
+                <td>( - ) Magnitude</td>
+                <td>Positive Phase</td>
+                </tr>
+            </table>
+        </div>
+            <textarea class="innerContainer" id="logBox"></textarea>
+
     </div>
-    <div class="btn-toolbar btn-group-justified">
-     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">SN</button>
-     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">DATE</button>
-     <button type="button" class="btn btn-warning btn-sm mr-1" onclick="">EXPORT CSV..</button>
-    </div>
-</div>
-<div class="innerContainer" id="scriptBox2">scriptBox2</div>
-<div class="innerContainer" id="logBoxContainer">
-    <textarea id="logBox"></textarea>
-</div>
 </div>
 <script type="text/javascript" src="/eel.js"></script>
 <script type="text/javascript" src="/js/testing.js"></script>
 <script type="text/javascript" src="/js/PCB.js"></script>
 <script>
-
-var antennaColors;
-async function run(){
-let antennaColors = await eel.getDataList()();
-console.log(antennaColors.length)
-for (i=0; i < 28; i++){
-console.log(i);
-editColor(antennaColors[i][0],antennaColors[i][1])};
-}
-run();
-
-
+    var antennaColors;
+    async function run() {
+        let antennaColors = await eel.getDataList()();
+        console.log(antennaColors.length)
+        for (i = 0; i < 28; i++) {
+            console.log(i);
+            editColor(antennaColors[i][0], antennaColors[i][1])
+        };
+    }
+    run();
 </script>
-
 
 </html>

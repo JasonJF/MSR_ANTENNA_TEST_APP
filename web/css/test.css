@@ -30,6 +30,7 @@ body {
 
 #vizWindow {
     display:flex;
+    flex-direction: row;
     height: 400px;
     width: auto;
     text-align: center;
@@ -37,6 +38,7 @@ body {
 }
 #scriptBox1 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: left;
     padding-left: 10px;
@@ -49,7 +51,7 @@ body {
 }
 #logBoxContainer {
 
-     align-items: stretch;
+
 
 }
 #logBox {
@@ -85,3 +87,27 @@ body {
 .buttonSpacer {
     flex-grow: 1
     }
+.interfaceWrapper {
+    display:flex;
+    flex-direction: row;
+    height: auto;
+
+    }
+.buttonBox {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;}
+.messageWrapper {
+    display:flex;
+    flex-direction: row;
+    height: auto;
+    align-items: stretch;
+    }
+.resultsBox {
+    width: 500px;
+    color: white;
+    border: 1px solid white;
+    //border-collapse: collapse;
+    background-color:  #333036;
+}
