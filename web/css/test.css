@@ -63,7 +63,7 @@ body {
     background-color: black;
     color: white;
     text-align: left;
-    height: 96%;
+    height: auto;
     width: 100%;
     overflow: auto;
 }
@@ -104,18 +104,20 @@ body {
     height: auto;
     align-items: stretch;
     }
-.resultsBox {
-    width: 500px;
-    color: white;
+
+
+.resultsTable{
+    width: 600px;
     height:auto;
-    border: 1px solid white;
-    //border-collapse: collapse;
-    background-color:  #333036;
-}
-table, th, td {
   color: white;
   border: 1px solid black;
   //border-collapse: collapse;
   background-color:  #333036;
   padding-left: 5px;
 }
+tr:hover {
+    background-color: #149C2B;
+}
+td {
+     border: 1px solid black;
+    }
