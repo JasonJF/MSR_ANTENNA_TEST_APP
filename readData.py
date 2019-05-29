@@ -47,5 +47,6 @@ def readData():
 
 
     return (newData)
-# readData()
-# print(newData)
+readData()
+print(data)
+print(newData)

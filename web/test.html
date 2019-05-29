@@ -41,12 +41,13 @@
         <div class="innerContainer">
             <table class="resultsBox" style="text-wrap=normal" id="resultsBox">
                 <tr>
-                <td>Element</td>
-                <td>( + ) Magnitude</td>
-                <td>( - ) Magnitude</td>
-                <td>Positive Phase</td>
+                <th> Element</th>
+                <th>( + ) Magnitude</th>
+                <th>( - ) Magnitude</th>
+                <th> Phase Mod</th>
                 </tr>
             </table>
+
         </div>
             <textarea class="innerContainer" id="logBox"></textarea>
 
@@ -61,7 +62,7 @@
         let antennaColors = await eel.getDataList()();
         console.log(antennaColors.length)
         for (i = 0; i < 28; i++) {
-            console.log(i);
+<!--            console.log(i);-->
             editColor(antennaColors[i][0], antennaColors[i][1])
         };
     }

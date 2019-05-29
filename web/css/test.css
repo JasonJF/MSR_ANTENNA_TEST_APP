@@ -14,7 +14,7 @@ body {
     //height: 80px;
     }
 .innerContainer {
-    height: 160px;
+    height: auto;
     align-items: stretch;
     background-color: none;
     color: white;
@@ -107,7 +107,15 @@ body {
 .resultsBox {
     width: 500px;
     color: white;
+    height:auto;
     border: 1px solid white;
     //border-collapse: collapse;
     background-color:  #333036;
+}
+table, th, td {
+  color: white;
+  border: 1px solid black;
+  //border-collapse: collapse;
+  background-color:  #333036;
+  padding-left: 5px;
 }
