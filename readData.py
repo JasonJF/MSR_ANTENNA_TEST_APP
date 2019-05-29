@@ -4,7 +4,7 @@ maxPow = 5
 data = []
 newData = []
 
-def readData():
+def readColours():
 
 
     with open('testData.csv') as csvDataFile:
@@ -47,6 +47,16 @@ def readData():
 
 
     return (newData)
-readData()
-print(data)
-print(newData)
+
+def readData():
+
+
+    with open('testData.csv') as csvDataFile:
+        csvReader = csv.reader(csvDataFile)
+        for row in csvReader:
+            data.append(row)
+
+    return (data)
+# readData()
+# print(data)
+# print(newData)

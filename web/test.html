@@ -58,9 +58,13 @@
 <script type="text/javascript" src="/js/PCB.js"></script>
 <script>
     var antennaColors;
+    var antennaData;
+
     async function run() {
-        let antennaColors = await eel.getDataList()();
-        console.log(antennaColors.length)
+        let antennaColors = await eel.getColourList()();
+        let antennaData = await eel.getDataList()();
+        populateTable(antennaData);
+<!--        console.log(antennaColors);-->
         for (i = 0; i < 28; i++) {
 <!--            console.log(i);-->
             editColor(antennaColors[i][0], antennaColors[i][1])
