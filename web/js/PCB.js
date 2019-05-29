@@ -1,3 +1,13 @@
+function createBlock(x,i) {
+            var elementID = "ANT"+(15-i)+"base";
+            var xPos = x;
+            var shape = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            shape.setAttribute('class','baseBlock');
+
+          shape.setAttribute('id', elementID);
+            shape.style.x = xPos;
+            document.getElementById("svgPCB").appendChild(shape);
+        }
 function createBlockPOS(x,i) {
             var elementID = "ANT"+(15-i)+"POS";
             var xPos = x;
@@ -29,5 +39,7 @@ var x = 71.4;
         var newX = (x*i)-61;
         var posX = newX + 'px';
 //        console.log(posX);
+
         createBlockPOS(posX,i);
-        createBlockNEG(posX,i);}
+        createBlockNEG(posX,i);
+        createBlock(posX,i);}
