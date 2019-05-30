@@ -3,6 +3,7 @@ function createBlock(x,i) {
             var xPos = x;
             var shape = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
             shape.setAttribute('class','baseBlock');
+            shape.classList.add("ANT"+(15-i))
 
           shape.setAttribute('id', elementID);
             shape.style.x = xPos;
@@ -43,3 +44,30 @@ var x = 71.4;
         createBlockPOS(posX,i);
         createBlockNEG(posX,i);
         createBlock(posX,i);}
+var baseElements = [];
+var rows = [];
+baseElements = document.getElementsByClassName('baseBlock');
+rows = document.getElementsByTagName("tr");
+for (var i = 0; i < baseElements.length; i++) {
+    baseElements[i].addEventListener('mouseover', mouseOverEffect);
+    baseElements[i].addEventListener('mouseout', mouseOutEffect);
+}
+function mouseOverEffect() {
+  var indicator = (this.id);
+  var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
+  var value = indicator.match(key);
+  console.log(value[0]);
+  r = document.getElementsByClassName(value[0]);
+  r[1].classList.add("rowHover");
+  this.classList.add("bar-highlight");
+//  var indie = this.indexOf();
+}
+function mouseOutEffect() {
+  var indicator = (this.id);
+  var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
+  var value = indicator.match(key);
+  console.log(value[0]);
+  r = document.getElementsByClassName(value[0]);
+  r[1].classList.remove("rowHover");
+  this.classList.remove("bar-highlight");
+}

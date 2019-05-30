@@ -15,6 +15,7 @@ function addRow() {
         let newRow = tableRef.insertRow(-1);
         rowLab = ("ANT"+(row+1)+"row");
         newRow.setAttribute('id',rowLab);
+        newRow.classList.add("ANT"+(row+1));
 //        console.log("row" + row);
         for (var cell; cell < 4; cell++) {
 //
@@ -69,5 +70,4 @@ function getPhase(phase_1, phase_2) {
 
     newPhase = Math.abs(phase_1) + Math.abs(phase_2);
     return newPhase;}
-function myOverFunction() {
-    }
+

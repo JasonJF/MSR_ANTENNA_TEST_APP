@@ -115,9 +115,9 @@ body {
   background-color:  #333036;
   padding-left: 5px;
 }
-tr:hover {
-    background-color: #149C2B;
-}
+//tr:hover {
+//    background-color: #149C2B;
+//}
 td {
      border: 1px solid black;
     }

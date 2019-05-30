@@ -56,8 +56,16 @@
   y: 79px;
   fill: blue;
 }
-.baseBlock:hover {
-    //fill:white;
+#ANT1row:hover .baseBlock{
+    fill:white;
     stroke: white;
     stroke-width: 5px;
     }
+.bar-highlight {
+    stroke: white;
+    stroke-width: 5px;
+    fill: #ec008c;
+    opacity: 1;
+}
+.rowHover {
+     background-color: #149C2B;}
