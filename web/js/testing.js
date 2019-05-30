@@ -16,6 +16,7 @@ function addRow() {
         rowLab = ("ANT"+(row+1)+"row");
         newRow.setAttribute('id',rowLab);
         newRow.classList.add("ANT"+(row+1));
+        newRow.classList.add("dataRow");
 //        console.log("row" + row);
         for (var cell; cell < 4; cell++) {
 //

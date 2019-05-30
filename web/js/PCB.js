@@ -47,27 +47,48 @@ var x = 71.4;
 var baseElements = [];
 var rows = [];
 baseElements = document.getElementsByClassName('baseBlock');
-rows = document.getElementsByTagName("tr");
+rows = document.getElementsByClassName('dataRow');
 for (var i = 0; i < baseElements.length; i++) {
-    baseElements[i].addEventListener('mouseover', mouseOverEffect);
-    baseElements[i].addEventListener('mouseout', mouseOutEffect);
+    baseElements[i].addEventListener('mouseover', mouseOverEffectElement);
+    baseElements[i].addEventListener('mouseout', mouseOutEffectElement);
+    rows[i].addEventListener('mouseover', mouseOverEffectRow);
+    rows[i].addEventListener('mouseout', mouseOutEffectRow);
 }
-function mouseOverEffect() {
+function mouseOverEffectElement() {
   var indicator = (this.id);
   var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
   var value = indicator.match(key);
-  console.log(value[0]);
+//  console.log(value[0]);
   r = document.getElementsByClassName(value[0]);
   r[1].classList.add("rowHover");
   this.classList.add("bar-highlight");
 //  var indie = this.indexOf();
 }
-function mouseOutEffect() {
+function mouseOutEffectElement() {
   var indicator = (this.id);
   var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
   var value = indicator.match(key);
-  console.log(value[0]);
+//  console.log(value[0]);
   r = document.getElementsByClassName(value[0]);
   r[1].classList.remove("rowHover");
   this.classList.remove("bar-highlight");
+}
+function mouseOverEffectRow() {
+  var indicator = (this.id);
+  var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
+  var value = indicator.match(key);
+//  console.log(value[0]);
+  r = document.getElementsByClassName(value[0]);
+  this.classList.add("rowHover");
+  r[0].classList.add("bar-highlight");
+//  var indie = this.indexOf();
+}
+function mouseOutEffectRow() {
+  var indicator = (this.id);
+  var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
+  var value = indicator.match(key);
+//  console.log(value[0]);
+  r = document.getElementsByClassName(value[0]);
+  this.classList.remove("rowHover");
+  r[0].classList.remove("bar-highlight");
 }
