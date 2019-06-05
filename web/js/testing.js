@@ -1,5 +1,13 @@
 document.getElementById("logBox").disabled = true; //make textarea disabled
+var defaultElements = [];
 
+function generateArray() {
+
+    for(i=1 ; i < 15; i++) {
+        defaultElements.push("ANT"+i);
+       }
+        console.log(defaultElements);
+    }
 function uiReload() {
     location.reload(true);
     }      //relaods the current page
@@ -70,5 +78,29 @@ function populateTable(antennaData){
 function getPhase(phase_1, phase_2) {
 
     newPhase = Math.abs(phase_1) + Math.abs(phase_2);
-    return newPhase;}
-
+    return newPhase;
+    }
+function singleElementPos() {
+    var element =getSelectedElement();
+    //gets the index of the selected element from the array
+    var e = defaultElements.indexOf(element);
+    //add a leading zero if the value is less than 10
+    if(e<10){
+    e = "0"+e;}
+    //generate the command
+    var command = "$"+e+"_Pos;";
+    eel.sendtoArd(command);
+    //console.log(command);
+    }
+function singleElementNeg() {
+    var element =getSelectedElement();
+    //gets the index of the selected element from the array
+    var e = defaultElements.indexOf(element);
+    //add a leading zero if the value is less than 10
+    if(e<10){
+    e = "0"+e;}
+    //generate the command
+    var command = "$"+e+"_Neg;";
+    eel.sendtoArd(command);
+    //console.log(command);
+    }

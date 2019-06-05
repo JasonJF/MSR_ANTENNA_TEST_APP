@@ -1,4 +1,5 @@
 import eel
+from Arduino import *
 from readData import *
 
 @eel.expose

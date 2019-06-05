@@ -35,10 +35,12 @@
 
         </div>
         <div class="innerContainer" id="miniButtonBox">
-            <button type="button" class="btn btn-success btn-lg m-2 miniButton" onclick="">POS</button>
-            <button type="button" class="btn btn-danger btn-lg m-2 miniButton" onclick="">NEG</button>
-            <button type="button" class="btn btn-warning btn-lg m-2 miniButton" onclick="">OFF</button><br>
-            <label class="miniButton">ANT XX</label>
+            <button type="button" class="btn btn-success btn-sm m-1 miniButton" onclick="eel.resetCPLD()">RESET</button>
+            <button type="button" class="btn btn-success btn-sm m-1 miniButton" onclick="singleElementPos()">POS</button>
+            <button type="button" class="btn btn-danger btn-sm m-1 miniButton" onclick="singleElementNeg()">NEG</button>
+            <button type="button" class="btn btn-warning btn-sm m-1 miniButton" onclick="eel.allElemOff()">OFF</button><br>
+
+            <label id="selectedElement" class="miniButton">ANT XX</label>
         </div>
     </div>
 
@@ -63,6 +65,7 @@
 <script type="text/javascript" src="/js/testing.js"></script>
 <script type="text/javascript" src="/js/PCB.js"></script>
 <script>
+    generateArray();
     var antennaColors;
     var antennaData;
 

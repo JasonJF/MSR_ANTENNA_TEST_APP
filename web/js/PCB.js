@@ -51,6 +51,7 @@ rows = document.getElementsByClassName('dataRow');
 for (var i = 0; i < baseElements.length; i++) {
     baseElements[i].addEventListener('mouseover', mouseOverEffectElement);
     baseElements[i].addEventListener('mouseout', mouseOutEffectElement);
+    baseElements[i].addEventListener('click', clickEffectElement);
     rows[i].addEventListener('mouseover', mouseOverEffectRow);
     rows[i].addEventListener('mouseout', mouseOutEffectRow);
 }
@@ -92,3 +93,16 @@ function mouseOutEffectRow() {
   this.classList.remove("rowHover");
   r[0].classList.remove("bar-highlight");
 }
+function clickEffectElement(){
+     var indicator = (this.id);
+    var key = "ANT((\\d+\\d)|(\\d))";                   //using regex to find key
+    var value = indicator.match(key);
+    //console.log(value[0]);
+    document.getElementById("selectedElement").innerHTML = value[0];
+    getSelectedElement();
+    }
+function getSelectedElement(){
+    var element = document.getElementById("selectedElement").innerHTML;
+    //console.log(element)
+    return(element);
+    }

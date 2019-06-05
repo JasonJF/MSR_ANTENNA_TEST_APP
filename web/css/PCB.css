@@ -69,3 +69,9 @@
 }
 .rowHover {
      background-color: #149C2B;}
+.baseBlock:active {
+    stroke: green;
+    stroke-width: 5px;
+    fill: #ec008c;
+    opacity: 1;
+}
