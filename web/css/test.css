@@ -121,3 +121,13 @@ body {
 td {
      border: 1px solid black;
     }
+.miniButton {
+    width:150px;
+    }
+#miniButtonBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    font-size: 20px;}
